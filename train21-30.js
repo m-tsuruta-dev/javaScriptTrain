@@ -60,3 +60,78 @@ console.log(answer25_2);
 
 /* No26 */
 console.log(`\nNo26`);
+
+let intBox26 = [];
+
+while (true) {
+    intBox26 = [];
+  for (let i = 0; i < 10; i++) {
+    let num = Math.floor( Math.random() * 30 ) + 1;
+    intBox26.push(num + 1);
+  }
+
+  let answer = intBox26.some((value) => value % 11 == 0 );
+  if (answer) {
+    break;
+  } else {
+    
+  }
+}
+console.log(intBox26);
+
+/* No27 */
+console.log(`\nNo27`);
+
+let values27 = [1, "a", 2, "b", "c", 3];
+let intArray27 = [];
+let stringArray27 = [];
+  
+
+for (let value of values27) {
+  if (typeof(value) === "number") {
+    intArray27.push(value);
+  } else if (typeof(value) === "string") {
+    stringArray27.push(value);
+  }
+}
+
+console.log(intArray27);
+console.log(stringArray27);
+
+/* No28 */
+console.log(`\nNo28`);
+
+let values28 = [1, "a", 2, "b", "c", 3, "4", "5", "6"];
+let intArray28 = [];
+let stringArray28 = [];
+  
+
+for (let value of values28) {
+  if (! isNaN(value)) {
+    value = parseInt(value);
+    intArray28.push(value);
+  } else {
+    stringArray28.push(value);
+  }
+}
+
+console.log(intArray28.sort((v1, v2) => v2 - v1));
+
+/* No29 */
+console.log(`\nNo29`);
+
+let values29 =  ["Ms. Tanaka", "Mr. Suzuki", "Ms. Akagi", "Mrs. Yoko", "Ms. Yoshiki"];
+let arrayBox29 = [];
+let arrayBox29_2 = [];
+  
+arrayBox29 = values29.filter((value) => value.startsWith("Ms."));
+console.log(arrayBox29);
+arrayBox29_2 = values29.filter((value) => value.endsWith("ki"));
+console.log(arrayBox29_2);
+
+/* No30 */
+console.log(`\nNo30`);
+
+let values30 = ["Taiwan-tokyo", "Taiwan-osaka", "Taiwan-kyoto"];
+let resultValues30 = values30.map((value) => value.replaceAll("Taiwan", "Japan"));
+console.log(resultValues30);
